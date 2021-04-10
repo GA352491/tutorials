@@ -1,2 +1,2 @@
-web: gunicorn prj3.wsgi --log-file -
+web: gunicorn tutorials.wsgi --log-file -
 
