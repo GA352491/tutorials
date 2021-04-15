@@ -1,0 +1,537 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous"/>
+
+    <title>Home</title>
+    <style>
+
+
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {#    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">#}
+    {#    <style>#}
+    {#        body {#}
+    {#            font-family: 'Chivo', sans-serif;#}
+    {#            font-weight: 300;#}
+    {#        }#}
+    {##}
+    {#        h1, h2, h3, h4, h5, h6 {#}
+    {#            font-family: 'Playfair Display', serif;#}
+    {#            font-weight: 700;#}
+    {#            font-style: italic;#}
+    {#        }#}
+    {#    </style>#}
+    <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url("{% static 'BadTyp.otf' %}");
+        }
+
+        body {
+        {#font-family: myFirstFont;#}
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Spectral', serif;
+        }
+    </style>
+</head>
+<style>
+    .card {
+    {#min-height: 270px;#} border-radius: 15px;
+        border: 20px;
+
+    {#border: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;#}{#box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17) box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);#}
+    }
+
+    .card-text {
+        color: white !important;
+    }
+
+    .card:hover {
+    {#box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2)!important;#} box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+        border: 30px;
+        background: white !important;
+
+    }
+
+    .card:hover .card-text {
+        color: #000 !important;
+
+    }
+
+
+</style>
+<style>
+    .vertical-nav {
+        min-width: 17rem;
+        width: 17rem;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+    }
+
+    .page-content {
+        width: calc(100% - 17rem);
+        margin-left: 17rem;
+        transition: all 0.4s;
+    }
+
+    /* for toggle behavior */
+
+    #sidebar.active {
+        margin-left: -17rem;
+    }
+
+    #content.active {
+        width: 100%;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        #sidebar {
+            margin-left: -17rem;
+        }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
+
+        #content {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .author {
+            padding-left: 400px;
+        }
+    }
+</style>
+
+
+{#<body style="background: radial-gradient(53.85% 64.23% at 79.27% 51.46%, #100101 28.38%, rgba(34, 3, 3, 0) 100%), #440606;">#}
+
+{#<body style="background: radial-gradient(53.85% 64.23% at 79.27% 51.46%, #100101 28.38%, rgba(34, 3, 3, 0) 100%), #440606;">#}
+{#<body style="background: #F2F2F0">#}
+{#<body style="background-image: linear-gradient(160deg,  #590202 0%,#0D0D0D 0%,#010440  );">#}
+<body style="{{ b }}">
+
+
+{#<img src="{% static 'home/blob.svg' %}" class="img-fluid" style="height: auto;width: 50%;max-width: 500px">#}
+
+{% include 'snippets/navbar.html' %}
+
+{#{% for data in courses %}#}
+{#    {% if  data.course == 'PYTHON' %}#}
+{#        <p>Python</p>#}
+{#        <span style="color: #013A40;"> <a#}
+{#                href="{% url 'tutorial' data.id %}">Learn -></a></span>#}
+{#    {% endif %}#}
+{#    {% if data.course == 'JAVA' %}#}
+{#        <p>JAVA#}
+{#        <span style="color: #013A40;"> <a#}
+{#                href="{% url 'tutorial' data.id %}">Learn -></a></span>#}
+{#    {% endif %}#}
+{#{% endfor %}#}
+
+
+<div class="d-none d-md-block d-lg-block">
+    <div class="row">
+
+        <div class="col-1 ms-5 " style="">
+            <div class="mt-5 pt-5">
+
+            </div>
+            <div class="vl " style="border-left: 2px solid white!important;height: 270px;margin: 15px!important; ">
+            </div>
+
+
+            <div class="col" style="color: white">
+                <div class="row"><span style="font-size: 35px"> <i class="fab fa-facebook-f"></i></span></div>
+                <div class="row"><span style="font-size: 35px"><i class="fab fa-instagram"></i></span></div>
+                <div class="row"><span style="font-size: 35px"> <i class="fab fa-linkedin-in"></i></span></div>
+            </div>
+            <div class="vl" style="border-left: 2px solid white!important;height: 250px;margin: 15px!important;">
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="container col-md-10">
+
+                <div class=" mt-md-1 pt-3  ps-md-5 ms-md-3">
+                    {#            <span style="font-size: 28px;color: #590222!important;"#}
+                    <span style="font-size: 28px;color: white!important;"
+                          class=" ">
+                        "YOU MIGHT NOT THINK THAT  <span style="color: #D11F1F">PROGRAMMERS</span>   ARE ARTISTS,
+                BUT PROGRAMMERS IS AN EXTREMELY CREATIVE PROFESSION.
+               <span style="color: #F2C335"> IT'S LOGIC-BASED  CREATIVITY </span> "
+            </span>
+                    <p class="mt-2  ms-md-5 ps-md-5" style="">
+                   <span class="author" style="color: white;font-size: 25px;">
+                      - JOHN ROMERO
+                   </span>
+                    </p>
+
+
+                </div>
+
+            </div>
+            <div class="container col-md mt-3 pt-5">
+                <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+                    {% for data in courses %}
+
+                        {% if data.course == 'PYTHON' %}
+
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#0D0E26">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                                    <img class="img-fluid ms-5 mt-4" src="{% static 'home/py.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-5 " style="text-align: center">
+                                        <span class="card-text" style="color: white;font-size: 24px"> PYTHON</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        {% endif %}
+                        {% if data.course == 'JAVA' %}
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#0D2601">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                                    <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/java2.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text" style="color: white;font-size: 25px"> JAVA</span>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if data.course == 'PYTHON AUTOMATION' %}
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#8C1B1B">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                                    <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/settings.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-4 " style="text-align: center">
+                                    <span class="card-text"
+                                          style="color: white;font-size: 21px">PYTHON AUTOMATION</span>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if data.course == 'JENKINS' %}
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#262626">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                                    <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/jenkins.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text" style="color: white;font-size: 25px"> JENKINS</span>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if data.course == 'DOCKER' %}
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#012340">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                                    <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/docker.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text" style="color: white;font-size: 25px"> DOCKER</span>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if data.course == 'GIT & GITHUB' %}
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#425359">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <img class="img-fluid ms-5 mt-5" src="{% static 'home/course/Git.png' %}"
+                                                 style="height: auto;max-width: 50px;">
+                                        </div>
+                                        <div class="col">
+                                            <img class="img-fluid  mt-5" src="{% static 'home/course/github.png' %}"
+                                                 style="height: auto;max-width: 50px;">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text"
+                                              style="color: white;font-size: 25px"> GIT & GITHUB</span>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if data.course == 'LINUX' %}
+
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background:#F2B33D ">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                                    <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/linux.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-3 " style="text-align: center">
+                                        <span class="card-text" style="color: white;font-size: 24px"> LINUX</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        {% endif %}
+                        {% if data.course == 'SHELL SCRIPTING' %}
+
+                            <div class="card shadow-lg col-md-3 ms-5"
+                                 style="max-width: 220px;max-height: 220px;background: #A65221">
+                                <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                                    <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/shell.png' %}"
+                                         style="height: auto;max-width: 100px;">
+                                    <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text "
+                                              style="color: white;font-size: 24px"> SHELL SCRIPTING</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        {% endif %}
+
+
+
+
+                    {% endfor %}
+
+                    <!--<div class="card" style="width: 18rem;">
+            <img src="{% static 'home/py.png' %}" class="card-img-top" alt="..." style="max-height: 180px;max-width: 180px">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">PYTHON
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="d-block d-md-none d-lg-none">
+    <div class="container col-md-9 ">
+
+        <div class=" mt-md-1 pt-3 ps-md-5 ms-md-3">
+            {#            <span style="font-size: 28px;color: #590222!important;"#}
+            <span style="font-size: 28px;color: white!important;"
+                  class="d-flex justify-content-center ">
+                "YOU MIGHT NOT THINK THAT PROGRAMMERS ARE ARTISTS,
+                BUT PROGRAMMERS IS AN EXTREMELY CREATIVE PROFESSION.
+                IT'S LOGIC-BASED CREATIVITY"
+            </span>
+            <p class="mt-2  ms-md-5 ps-md-5" style="">
+                   <span class="author" style="color: white;font-size: 25px;">
+                      - JOHN ROMERO
+                   </span>
+            </p>
+
+
+        </div>
+
+    </div>
+    <div class="container col-md-8 mt-5 pt-5">
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+            {% for data in courses %}
+
+                {% if data.course == 'PYTHON' %}
+
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#0D0E26">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                            <img class="img-fluid ms-5 mt-4" src="{% static 'home/py.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-5 " style="text-align: center">
+                                <span class="card-text" style="color: white;font-size: 24px"> PYTHON</span>
+                            </div>
+                        </a>
+                    </div>
+
+                {% endif %}
+                {% if data.course == 'JAVA' %}
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#0D2601">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/java2.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-4 " style="text-align: center">
+                                <span class="card-text" style="color: white;font-size: 25px"> JAVA</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if data.course == 'PYTHON AUTOMATION' %}
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#8C1B1B">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/settings.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-4 " style="text-align: center">
+                                    <span class="card-text"
+                                          style="color: white;font-size: 21px">PYTHON AUTOMATION</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if data.course == 'JENKINS' %}
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#262626">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/jenkins.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-4 " style="text-align: center">
+                                <span class="card-text" style="color: white;font-size: 25px"> JENKINS</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if data.course == 'DOCKER' %}
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#012340">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/docker.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-4 " style="text-align: center">
+                                <span class="card-text" style="color: white;font-size: 25px"> DOCKER</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if data.course == 'GIT & GITHUB' %}
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#425359">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid ms-5 mt-5" src="{% static 'home/course/Git.png' %}"
+                                         style="height: auto;max-width: 50px;">
+                                </div>
+                                <div class="col">
+                                    <img class="img-fluid  mt-5" src="{% static 'home/course/github.png' %}"
+                                         style="height: auto;max-width: 50px;">
+                                </div>
+                            </div>
+
+
+                            <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text"
+                                              style="color: white;font-size: 25px"> GIT & GITHUB</span>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+                {% if data.course == 'LINUX' %}
+
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background:#F2B33D ">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                            <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/linux.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-3 " style="text-align: center">
+                                <span class="card-text" style="color: white;font-size: 24px"> LINUX</span>
+                            </div>
+                        </a>
+                    </div>
+
+                {% endif %}
+                {% if data.course == 'SHELL SCRIPTING' %}
+
+                    <div class="card shadow-lg col-md-3 ms-5"
+                         style="max-width: 220px;max-height: 220px;background: #A65221">
+                        <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
+                            <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/shell.png' %}"
+                                 style="height: auto;max-width: 100px;">
+                            <div class="card-body p-4 " style="text-align: center">
+                                        <span class="card-text "
+                                              style="color: white;font-size: 24px"> SHELL SCRIPTING</span>
+                            </div>
+                        </a>
+                    </div>
+
+                {% endif %}
+
+
+
+
+            {% endfor %}
+
+            <!--<div class="card" style="width: 18rem;">
+            <img src="{% static 'home/py.png' %}" class="card-img-top" alt="..." style="max-height: 180px;max-width: 180px">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">PYTHON
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>-->
+        </div>
+    </div>
+</div>
+
+
+{% include 'snippets/footer.html' %}
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+-->
+<script>
+    $(function () {
+        // Sidebar toggle behavior
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+        });
+    });
+</script>
+
+</body>
+</html>
