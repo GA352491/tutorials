@@ -360,12 +360,12 @@
 
     </div>
     <div class="container-fluid  mt-5 pt-5">
-        <div class=" ">
+        <div class="row row-cols-2 g-2  ">
             {% for data in courses %}
 
                 {% if data.course == 'PYTHON' %}
 
-                    <div class="card shadow-lg  ms-5"
+                    <div class="card shadow-lg  "
                          style="max-width: 180px;max-height: 180px;background:#0D0E26">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
                             <img class="img-fluid ms-5 mt-4" src="{% static 'home/py.png' %}"
@@ -378,7 +378,7 @@
 
                 {% endif %}
                 {% if data.course == 'JAVA' %}
-                    <div class="card shadow-lg col-md-3 ms-5"
+                    <div class="card shadow-lg col-md-3 "
                          style="max-width: 180px;max-height: 180px;background:#0D2601">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
