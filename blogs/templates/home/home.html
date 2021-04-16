@@ -361,7 +361,7 @@
 
     </div>
     <div class="container-fluid  mt-5 pt-5">
-        <div class="row row-cols-2 g-2  ">
+        <div class="row row-cols-2 g-3  ">
             {% for data in courses %}
 
                 {% if data.course == 'PYTHON' %}
@@ -369,7 +369,7 @@
                     <div class="card shadow-lg col-5 mx-2 "
                          style="max-width: 200px;max-height: 200px;background:#0D0E26">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
-                            <img class="img-fluid ms-5 mt-4" src="{% static 'home/py.png' %}"
+                            <img class="img-fluid ms-3 mt-4" src="{% static 'home/py.png' %}"
                                  style="height: auto;max-width: 70px;">
                             <div class="card-body  " style="text-align: center">
                                 <span class="card-text" style="color: white;font-size: 20px"> PYTHON</span>
@@ -383,7 +383,7 @@
                          style="max-width: 200px;max-height: 200px;background:#0D2601">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
-                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/java2.png' %}"
+                            <img class="img-fluid ms-3 mt-3" src="{% static 'home/course/java2.png' %}"
                                  style="height: auto;max-width: 70px;">
                             <div class="card-body  " style="text-align: center">
                                 <span class="card-text" style="color: white;font-size: 20px"> JAVA</span>
@@ -392,11 +392,11 @@
                     </div>
                 {% endif %}
                 {% if data.course == 'PYTHON AUTOMATION' %}
-                    <div class="card shadow-lg col-5 "
-                         style="max-width: 180px;max-height: 180px;background:#8C1B1B">
+                    <div class="card shadow-lg col-5 mx-2 "
+                         style="max-width: 200px;max-height: 200px;background:#8C1B1B">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
-                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/settings.png' %}"
+                            <img class="img-fluid ms-3 mt-3" src="{% static 'home/course/settings.png' %}"
                                  style="height: auto;max-width: 70px;">
                             <div class="card-body  " style="text-align: center">
                                     <span class="card-text"
@@ -407,10 +407,10 @@
                 {% endif %}
                 {% if data.course == 'JENKINS' %}
                     <div class="card shadow-lg col-5 mx-2 "
-                         style="max-width: 180px;max-height: 1800px;background:#262626">
+                         style="max-width: 200px;max-height:200px;background:#262626">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
-                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/jenkins.png' %}"
+                            <img class="img-fluid ms-3 mt-3" src="{% static 'home/course/jenkins.png' %}"
                                  style="height: auto;max-width: 70px;">
                             <div class="card-body  " style="text-align: center">
                                 <span class="card-text" style="color: white;font-size: 20px"> JENKINS</span>
@@ -419,11 +419,11 @@
                     </div>
                 {% endif %}
                 {% if data.course == 'DOCKER' %}
-                    <div class="card shadow-lg col-5 "
-                         style="max-width: 180px;max-height: 180px;background:#012340">
+                    <div class="card shadow-lg col-5 mx-2"
+                         style="max-width: 200px;max-height: 200px;background:#012340">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
-                            <img class="img-fluid ms-5 mt-3" src="{% static 'home/course/docker.png' %}"
+                            <img class="img-fluid ms-3 mt-3" src="{% static 'home/course/docker.png' %}"
                                  style="height: auto;max-width: 70px;">
                             <div class="card-body  " style="text-align: center">
                                 <span class="card-text" style="color: white;font-size: 20px"> DOCKER</span>
@@ -433,7 +433,7 @@
                 {% endif %}
                 {% if data.course == 'GIT & GITHUB' %}
                     <div class="card shadow-lg col-5 mx-2"
-                         style="max-width: 180px;max-height: 180px;background:#425359">
+                         style="max-width: 200px;max-height: 200x;background:#425359">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
 
                             <div class="row">
@@ -457,8 +457,8 @@
                 {% endif %}
                 {% if data.course == 'LINUX' %}
 
-                    <div class="card shadow-lg col-5 "
-                         style="max-width: 180px;max-height: 180px;background:#F2B33D ">
+                    <div class="card shadow-lg col-5 mx-2 "
+                         style="max-width: 200px;max-height: 200px;background:#F2B33D ">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
                             <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/linux.png' %}"
                                  style="height: auto;max-width: 70px;">
@@ -472,7 +472,7 @@
                 {% if data.course == 'SHELL SCRIPTING' %}
 
                     <div class="card shadow-lg col-5 mx-2 "
-                         style="max-width: 180px;max-height: 180px;background: #A65221">
+                         style="max-width: 200px;max-height: 200px;background: #A65221">
                         <a href="{% url 'tutorial' data.id %}" style="text-decoration: none">
                             <img class="img-fluid ms-5 mt-4" src="{% static 'home/course/shell.png' %}"
                                  style="height: auto;max-width: 70px;">
