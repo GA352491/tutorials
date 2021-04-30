@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Course, Category, TutorialBlog
 
 from django.template.loader import render_to_string
+from django.http import JsonResponse
 
 import random
 
@@ -19,7 +20,6 @@ def home(request):
     ]
     b = random.choice(a)
 
-
     context = {'courses': courses, 'b': b}
     return render(request, 'home/home.html', context)
 
@@ -29,6 +29,7 @@ def tutorial(request, pk):
     # print(course.id)
     category = Category.objects.filter(course=course)
     t = TutorialBlog.objects.filter(course=course.id).first()
+    print(t)
     t2 = TutorialBlog.objects.filter(course=course.id).first()
     # print(t2)
     blogs = TutorialBlog.objects.filter(course=course)
@@ -36,6 +37,7 @@ def tutorial(request, pk):
 
     context = {'category': category, 't': t, 'blogs': blogs, 'course': course, }
     return render(request, 't-view.html', context)
+
 
 def tutorial_view(request, pk):
     blog = TutorialBlog.objects.get(id=pk)
@@ -48,8 +50,6 @@ def tutorial_view(request, pk):
     return render(request, 'tutorial/tutorial_view.html', context)
 
 
-def test(request):
-    return render(request, 'test.html')
 
 def tut(request):
     if request.is_ajax():
@@ -58,7 +58,6 @@ def tut(request):
         course = blog.course
         # print(blog)
 
-
         category = Category.objects.filter(course=course)
         blogs = TutorialBlog.objects.filter(course=course)
         context = {'blog': blog, 'category': category, 'blogs': blogs, 'course': course, }
@@ -66,5 +65,3 @@ def tut(request):
 
         data = {'blo': blo}
         return JsonResponse(data)
-
-    return render(request, 'test.html')
