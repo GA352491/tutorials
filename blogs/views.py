@@ -51,3 +51,21 @@ def tutorial_view(request, pk):
 
 def test(request):
     return render(request, 'test.html')
+
+def tut(request):
+    if request.is_ajax():
+        pk = request.GET.get('a')
+        blog = TutorialBlog.objects.get(id=pk)
+        course = blog.course
+        # print(blog)
+
+
+        category = Category.objects.filter(course=course)
+        blogs = TutorialBlog.objects.filter(course=course)
+        context = {'blog': blog, 'category': category, 'blogs': blogs, 'course': course, }
+        blo = render_to_string('tutorial/tutorial_view2.html', context, request=request)
+
+        data = {'blo': blo}
+        return JsonResponse(data)
+
+    return render(request, 'test.html')
