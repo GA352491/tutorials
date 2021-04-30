@@ -35,8 +35,7 @@ def tutorial(request, pk):
     # print(blogs)
 
     context = {'category': category, 't': t, 'blogs': blogs, 'course': course, }
-    return render(request, 'snippets/sidebar/index (1).html', context)
-
+    return render(request, 't-view.html', context)
 
 def tutorial_view(request, pk):
     blog = TutorialBlog.objects.get(id=pk)
